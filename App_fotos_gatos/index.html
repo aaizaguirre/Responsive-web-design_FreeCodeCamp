@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <!-- "title": determina lo que los navegadores muestran en la barra de título o pestañas del navegador. -->
     <title>CatPhotoApp</title>
 </head>
 <body>
     <!-- "<main></main>": sección principal. -->
-    <main>
+    <main class="menu">
     <!-- Anidamiento: colocar elementos dentro de otro (h1, h2 y p dentro de main). -->
         <!-- "a": permite la inserción de un enlace que lleva a otra página. -->
         <!-- El atributo "target='_blank'" en la etiqueta de apertura del elemento anchor (a) permite que el enlace se abra en una nueva pestaña.  -->
         <a href="https://freecodecamp.org" target="_blank">
             <!-- img: permite la inserción de imagenes. El atributo "src" es un elemento que especifica la ubicación de la imagen. El atributo "alt" es usado para mejorar la accesibilidad y se muestra en caso la imagen falle en cargar. -->
-            <img src="https://cdn.freecodecamp.org/platform/universal/fcc_secondary.svg" alt="Logo FreeCodeCamp" width="100%">
+            <img class="logoFreeCodeCamp" src="https://cdn.freecodecamp.org/platform/universal/fcc_secondary.svg" alt="Logo FreeCodeCamp" width="100%">
         </a>
         <h1>CatPhotoApp</h1>
         <section>
             <h2>Cat Photos</h2>
-            <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">   
+            <img class="fotoGato" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">   
+            <img class="fotoGato" src="https://bit.ly/fcc-running-cats" alt="Three cats playing.">
             <!-- "<p></p>": usado para crear párrafos. -->
             <p>See more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in our gallery.</p>
         </section>
@@ -35,7 +37,7 @@
             </ul>
             <!-- "figure": representa contenido independiente, permite asociar una imagen a una descripción. -->
             <figure>
-                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+                <img class="foto" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
                 <!-- "figcaption": añade una descripción o leyenda para describir la imagen anidada en el elemento "figure". -->
                 <!-- "em": cursiva. -->
                 <figcaption>Cats <em>love</em> lasagna.</figcaption>
@@ -48,7 +50,7 @@
                 <li>other cats</li>
             </ol>
             <figure>
-                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+                <img class="foto" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
                 <!-- "strong": negrita. -->
                 <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
             </figure>
@@ -57,9 +59,9 @@
             <h2>Cat Form</h2>
             <!-- "form": sección que contiene controles interactivos que permiten al usuario enviar información a un servidor web. -->
             <!-- El atributo "action" indica a dónde se enviarán los datos del formulario.  -->
-            <form action="https://freecatphotoapp.com/submit-cat-photo">
+            <form class="contenedorFieldset" action="https://freecatphotoapp.com/submit-cat-photo">
                 <!-- "fieldset": agrupa elementos relacionados dentro de un formulario, creando una sección o conjunto de campos relacionados. Aparecen en una nueva línea. -->
-                <fieldset>
+                <fieldset class="contenedorPreguntas">
                     <!-- "legend": actúa como leyenda/descripción para el contenido del elemento "fieldset". -->
                     <legend>Is your cat an indoor or outdoor cat?</legend>
                     <!-- "label": ayudan a asociar el texto a un elemento "input". Al hacer click en el texto se selecciona, por ejemmplo el "radio button" -->
@@ -77,7 +79,7 @@
                         <input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor
                     </label>
                 </fieldset>
-                <fieldset>
+                <fieldset class="contenedorPreguntas">
                     <legend>What's your cat's personality?</legend>
                     <!-- Atributo "checkbox" actúa como casilla de verificación para preguntas que pueden tener más de una respuesta. -->
                     <!-- Atributo "name" identifica y agrupa elementos de formulario relacionados.  -->

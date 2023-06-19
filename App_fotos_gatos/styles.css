@@ -1,0 +1,85 @@
+body {
+    background-color: aliceblue;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+}
+
+.menu {
+    width: 90%;
+    min-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 20px 20px 20px;
+}
+
+.logoFreeCodeCamp {
+    width: 300px;
+    margin-left: 850px;
+}
+
+h1, h2, h3, p, figcaption {
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+.fotoGato {
+    height: 300px;
+    margin-left: 180px;
+    display: inline-block;
+}
+
+.seeMore:visited, footer:visited {
+    color: blue;
+}
+
+.seeMore:hover, footer:hover {
+    font-weight: bold;
+}
+
+.foto {
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedorFieldset {
+    display: inline-block;
+    width: 80%;
+    min-width: 500px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.contenedorPreguntas {
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+input {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+label:hover {
+    font-weight: bold;
+}
+
+footer {
+    margin-top: -50px;
+}
