@@ -1,0 +1,109 @@
+<!DOCTYPE html> <!-- "<!DOCTYPE html>": declaración. Se asegura que el navegador intente cumplir las especificaciones de la industria.  -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- "title": determina lo que los navegadores muestran en la barra de título o pestañas del navegador. -->
+    <title>CatPhotoApp</title>
+</head>
+<body>
+    <!-- "<main></main>": sección principal. -->
+    <main>
+    <!-- Anidamiento: colocar elementos dentro de otro (h1, h2 y p dentro de main). -->
+        <!-- "a": permite la inserción de un enlace que lleva a otra página. -->
+        <!-- El atributo "target='_blank'" en la etiqueta de apertura del elemento anchor (a) permite que el enlace se abra en una nueva pestaña.  -->
+        <a href="https://freecodecamp.org" target="_blank">
+            <!-- img: permite la inserción de imagenes. El atributo "src" es un elemento que especifica la ubicación de la imagen. El atributo "alt" es usado para mejorar la accesibilidad y se muestra en caso la imagen falle en cargar. -->
+            <img src="https://cdn.freecodecamp.org/platform/universal/fcc_secondary.svg" alt="Logo FreeCodeCamp" width="100%">
+        </a>
+        <h1>CatPhotoApp</h1>
+        <section>
+            <h2>Cat Photos</h2>
+            <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">   
+            <!-- "<p></p>": usado para crear párrafos. -->
+            <p>See more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in our gallery.</p>
+        </section>
+        <section>
+            <h2>Cat Lists</h2>
+            <h3>Things cats love:</h3>
+            <!-- "ul": lista desordenada. -->
+            <ul>
+                <!-- "li": lista de objetos. -->
+                <li>cat nip</li>
+                <li>laser pointers</li>
+                <li>lasagna</li>
+            </ul>
+            <!-- "figure": representa contenido independiente, permite asociar una imagen a una descripción. -->
+            <figure>
+                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+                <!-- "figcaption": añade una descripción o leyenda para describir la imagen anidada en el elemento "figure". -->
+                <!-- "em": cursiva. -->
+                <figcaption>Cats <em>love</em> lasagna.</figcaption>
+            </figure>
+            <h3>Top 3 things cats hate:</h3>
+            <!-- "ol": lista ordenada. -->
+            <ol>
+                <li>flea treatment</li>
+                <li>thunder</li>
+                <li>other cats</li>
+            </ol>
+            <figure>
+                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+                <!-- "strong": negrita. -->
+                <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Cat Form</h2>
+            <!-- "form": sección que contiene controles interactivos que permiten al usuario enviar información a un servidor web. -->
+            <!-- El atributo "action" indica a dónde se enviarán los datos del formulario.  -->
+            <form action="https://freecatphotoapp.com/submit-cat-photo">
+                <!-- "fieldset": agrupa elementos relacionados dentro de un formulario, creando una sección o conjunto de campos relacionados. Aparecen en una nueva línea. -->
+                <fieldset>
+                    <!-- "legend": actúa como leyenda/descripción para el contenido del elemento "fieldset". -->
+                    <legend>Is your cat an indoor or outdoor cat?</legend>
+                    <!-- "label": ayudan a asociar el texto a un elemento "input". Al hacer click en el texto se selecciona, por ejemmplo el "radio button" -->
+                    <label>
+                        <!-- "input": campo de entrada de datos.  -->
+                        <!-- Atributos "tyoe" de "input": password (contraseña), text (texto), boton de reinicio (reset), entre otros. -->
+                        <!-- Atributo "radio": para preguntas en las que el usuario solo de una respuesta a partir de multiples opciones. -->
+                        <!-- Atributo "id" identifica elementos HTML específicos. -->
+                        <!-- Atributo "name" con el mismo valor permite que, al seleccionar un elemento "radio button" el otro se deseleccione automáticamente. -->
+                        <!-- El atributo "value" indica el valor que arrojará determinado elemento, para el caso de "radio button" (o selección) se debe indicar cual es el valor que se enviará al seleccionar determinada opcion.  -->
+                        <!-- Atributo "checked" hace que el button esté seleccionado por defecto.  -->
+                        <input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor
+                    </label>
+                    <label>
+                        <input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>What's your cat's personality?</legend>
+                    <!-- Atributo "checkbox" actúa como casilla de verificación para preguntas que pueden tener más de una respuesta. -->
+                    <!-- Atributo "name" identifica y agrupa elementos de formulario relacionados.  -->
+                    <input id="loving" value="loving" name="personality" type="checkbox" checked>
+                    <!-- El atributo "for" es otra manera de asociar un texto con el elemento "input". Se añade un texto dentro del elemento "label" y se le añade un atributo "for" con el mismo valor del atributo "id" del elemento "input". -->
+                    <label for="loving">Loving</label>                    
+                    <input id="lazy" value="lazy" name="personality" type="checkbox">
+                    <label for="lazy">Lazy</label>
+                    <input id="energetic" value="energetic" name="personality" type="checkbox">
+                    <label for="energetic">Energetic</label>
+                    <!-- El atributo "text" puede recibir otro atributo "name", que define el nombre del campo (identificador). -->
+                    <!-- El atributo "placeholder" da una idea de qué tipo de información se debe escribir en el elemento "input". -->
+                    <!-- El atributo "required" indica que el elemento "input" es obligatorio de completar. -->
+                    <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+                    <!-- "button": crea un botón cliqueable. -->
+                    <!-- Un "button" sin atributos envía la información a la ubicación especificada en el atributo "action" del "form". -->
+                    <!-- Los elementos "input" y "button" son inline, es decir, no aparecen en una nueva línea. -->
+                    <!-- Atributo "type" con el valor "submit" indica que es un botón de envío.  -->
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>   
+    <!-- "footer": pie de página. -->
+    <footer>
+        <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a></p>
+    </footer>      
+</body>
+</html>
