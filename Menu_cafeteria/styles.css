@@ -1,0 +1,118 @@
+body {
+    /* Imagen de fondo. */
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    /* Fuente del texto. */
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+/* ".class-name" : selector de clase. */
+.menu {
+    /* Ancho de página con referencia al elemento padre. */
+    width: 80%;
+    /* Ancho máximo: evita que se expanda más de lo necesario. */
+    max-width: 500px;
+    /* color de fondo. */
+    background-color: burlywood;
+    /* "margin": espacio invisible alrededor de un elemento. */
+    /* "margin-left" y "margin-right" con valor "auto" centro el elemento dentro del elemento padre. */
+    margin-left: auto;
+    margin-right: auto;
+    /* "padding": espacio interno (entre el contenido y los lados). */
+    padding: 20px 20px 20px 20px;
+}
+
+/* h1(element): indica el elmento al que se le aplicará el estilo. En este caso son "selectores de tipo". */
+h1, h2, p {
+    /* property: value; */
+    /* "text-aling": indica la alineación del texto, "center" indica centrado.  */
+    text-align: center;
+}
+
+h1,h2 {
+    /* La segunda fuente es la fuente de respaldo, que es utilizada en caso la fuente principal no esté disponible o no se pueda encontrar. */
+    font-family: Impact, serif;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.established {
+    font-style: italic;
+}
+
+img {
+    /* Comportamiento como un elemento título (elemento de tipo bloque). */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+}
+
+/* Por defecto "hr" es una línea delgada color gris claro. */
+hr {
+    /* "height": altura de la línea. */
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+}
+
+/* Accede al elemento "p" de la clase "item". */
+.item p {
+    /* Comportamiento de elementos inline (en la misma línea). */
+    display: inline-block;
+    /* Elementos inline solo ocupan el ancho de su contenido. Se debe especificar el ancho de sus elementos si se desea cambiarlos. */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.flavor, .dessert {
+    text-align: left;
+    width: 75%;
+}
+
+.price {
+    text-align: right;
+    width: 25%;
+}
+
+.bottom-line {
+    margin-top: 25px;
+}
+
+/* FOOTER */
+footer {
+    font-size: 14px;
+}
+
+a {
+    /* Color predeterminado de un enlace en el que aún no se hace clic es azul. De un enlace que ya ha sido visitado es morado/púrpura. */
+    color: black;
+}
+
+/* Modificar las propiedades de un enlace ya visitado. */
+a:visited {
+    color: grey;
+}
+
+/* Modificar las propiedades cuando el ratón pasa sobre él. */
+a:hover {
+    color: brown;
+}
+
+/* Modificar las propiedades cuando el enlace está siendo presionado. */
+a:active {
+    color: white;
+}
+
+.address {
+    margin-bottom: 5px;
+}
