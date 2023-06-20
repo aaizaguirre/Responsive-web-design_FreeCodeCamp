@@ -1,0 +1,56 @@
+h1 {
+    text-align: center;
+}
+
+.container {
+    /* Para el rgb, los valores van de 0 a 255. */
+    background-color: rgb(0, 0, 0);
+    padding: 10px 0;
+}
+
+.marker {
+    height: 25px;
+    width: 200px;
+    margin: 10px auto;      /* Esto centra la clase, con separación entre el borde superior de un elemento y el otro de 10px */
+}
+
+.red {
+    /* Valores hexadecimales: empiezan con "#", los siguientes valores van de 0 a 9 y de A a F. Los primeros 2 digitos representan el rojo, los siguientes el verde y por ultimo el azul. */
+    /* "00" es el 0% de ese color, mientras que "FF" es el 100%. */
+    background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+    /* "box-shadow" permite aplicar una o más sombras alrededor de un elemento. */
+    /* offsetX (mueve la sombra a los lados), offsetY (mueve la sombra hacia arriba y abajo), blurRadius (0 representa sombras con límites bruscos, mayores valores representan mayor difuminado), spreadRadius (expande el tamaño de la sombra), color */
+    box-shadow: 0 0 20px 0 rgba(83,14,14,0.8);
+}
+
+.green {
+    background: linear-gradient(#55680D, #71F53E, #116C31);
+    box-shadow: 0 0 20px 0 #3B7E20CC;
+}
+
+.blue {
+    /* "linear-gradient" establece la transición de un color a otro de la siguiente forma (dirección de transición, color1, color2) */
+    /* Cada color puede recibir el espacio que ocupará dentro de la transición. */
+    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+    box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+}
+
+.cap, .sleeve {
+    display: inline-block;
+}
+
+.cap {
+    width: 60px;
+    height: 25px;
+}
+
+.sleeve {
+    width: 110px;
+    height: 25px;
+    background-color: white;
+    /* "opacity": 0 representa totalmente transparente, 1 representa completamente opaco. */
+    opacity: 0.5;
+    /* grosor, estilo y color del borde. */
+    /* rgba permite definir el color y alpha(opacidad) */
+    border-left: 10px double rgba(0, 0, 0, 0.75);
+}
