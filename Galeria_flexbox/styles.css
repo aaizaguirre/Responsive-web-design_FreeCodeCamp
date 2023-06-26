@@ -1,0 +1,59 @@
+* {
+    /* "box-sizing": Establece cómo se calcula el ancho y alto de un elemento, incluyendo padding y border. */
+    /* "border-box": Ancho y alto del elemento se calculan de manera que relleno y borde se incluyen dentro de esas dimensiones. */
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f5f6f7;
+}
+
+.header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    /* "border-bottom": establece el ancho, estilo y color del borde inferior de un elemento. */
+    border-bottom: 4px solid #fdb347;
+}
+
+.gallery {
+    /* "display:flex": convierte un elemento en un contenedor flexible (flex container) convirtiendo todos sus hijos en elementos flex (flex items) que se colocan en una sola línea y se ajustan automaticamente para llenar el espacio disponible (en horizontal por defecto). */
+    display: flex;
+    /* "flex-direction": Establece la direccion en la que los flex items se colocan dentro del flex container. Tiene 4 valores posibles: row (por defecto), row-reverse, column o column-reverse. */
+    flex-direction: row;
+    /* "flex-wrap": determina como se comportan los flex items cuando el flex container es demasiado pequeño. El valor "wrap" hace que los elementos se coloquen en la siguiente fila o columna; el valor "nowrap" evita que los elementos se coloquen en varias filas. */
+    flex-wrap: wrap;
+    /* "justify-content": determina cómo se posicionan los flex items dentro de un flex container a lo largo del eje principal, afectando su posicion y el espacio que los rodea. Sus valores son: flex-start (por defecto, elementos se alinean al inicio del flex container), flex-end (elementos se alinean al final del flex container), center (elementos se alinean al centro horizontal del flex container), space-between (elementos se distribuyen uniformemente a lo largo del eje horizontal, dejando espacios iguales entre ellos y pegados al inicio y final del eje), space-around (elementos se distribuyen uniformemente en el eje horizontal dejando espacios iguales alrededor de ellos  y al final e inicio del eje), space-evenly (elementos se distribuyen uniformemente a lo largo del eje horizontal, dejando espacios iguales alrededor y entre ellos). */
+    justify-content: center;
+    /* "align-items": alinea y distribuye los flex items verticalmente dentro del flex container. Puede tomar los siguientes valores: stretch (predeterminado, elementos se estiran verticalmente ocupando todo el espacio), flex-start (elementos se alinean al inicio del eje vertical), flex-end (elementos se alinean al final del eje vertical), center (elementos se alinean al centro vertical), baseline (elementos se alinean en la línea de base común). */
+    align-items: center;
+    padding: 20px 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+    /* "gap": establece los espacios entre los elementos hijos de un flex container ak usar un display grid o flex. Si se especifican 2 valores, el primero se aplica al espacio entre filas y el segundo al espacio entre columnas. */
+    gap: 16px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    /* "object-fit": controla cómo se ajusta y muestra una imagen o video dentro de su contenedor. Evita la distorsión por diferentes relaciones de aspecto. Toma valores como: fill (imagen se estira o comprime para ajustarse al tamaño del contenedor, distorsionando su relacion de aspecto origial), contain (imagen se ajusta dentro del contenedor manteniendo su relación de aspecto original, pudiendo haber espacios vacios en el contenedor), cover (imagen se ajusta dentro del contenedor, manteniendo su relacion de aspecto original pero cubriendo totalmente el contenedor), none (imagen se muestra en su tamaño original, sin ningún ajuste dentro del contenedor), scale-down (imagen se ajusta dentro del contenedor manteniendo su relacion de aspecto original eligiendo entre contain o none el que resulte en un menor tamaño). */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* El pseudo elemento "::after" crea un elemento que es el último hijo del elemento seleccionado, seleccionandolo y aplicnadole estilos especificos. */
+.gallery::after {
+    /* "content": agrega el contenido. */
+    content: "Fin del flexbox";
+    text-align: center;
+    width: 350px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-radius: 10px;
+}
